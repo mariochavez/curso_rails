@@ -1,0 +1,10 @@
+%tr
+  %td= note.description
+  %td=number_to_currency note.amount
+  %td= note.category.name
+  %td= distance_of_time_in_words_to_now note.date
+  %td= number_to_currency calculate_iva(note.amount)
+  %td= link_to 'Show', note
+  %td= link_to 'Edit', edit_note_path(note)
+  %td= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete
+

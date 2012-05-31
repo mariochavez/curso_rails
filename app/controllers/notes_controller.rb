@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+  layout 'curso'
   # GET /notes
   # GET /notes.json
   def index

@@ -16,3 +16,6 @@ rerun.txt
 pickle-email-*.html
 *.swp
 *.suo
+
+.vagrant
+Vagrantfile

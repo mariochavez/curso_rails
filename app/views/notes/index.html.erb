@@ -1,23 +1,20 @@
-<h1>Listing notes</h1>
+<%= render :partial => 'shared/header', :locals => { :notes =>  @notes } %>
+
+<strong><%= t('hello') %></strong>
 
 <table>
   <tr>
     <th>Description</th>
     <th>Amount</th>
+    <th>Category</th>
+    <th>Date</th>
+    <th>IVA</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @notes.each do |note| %>
-  <tr>
-    <td><%= note.description %></td>
-    <td><%= note.amount %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  <%= render @notes %>
 </table>
 
 <br />
